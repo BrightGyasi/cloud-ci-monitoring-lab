@@ -12,7 +12,7 @@ jobs:
     steps:
       # Step 1: Checkout the repository
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
       # Step 2: Set up Python environment
       - name: Set up Python
@@ -23,6 +23,10 @@ jobs:
       # Step 3: Run the application
       - name: Run application
         run: python app.py
+        
+      # Step 4: Echo a build-start message
+      - name: Echo Build Message
+        run: echo "Build started successfully!"
 
       # Step 4: Optional: Echo success message
       - name: Build Success
